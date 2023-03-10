@@ -1,0 +1,62 @@
+.accordion {
+	padding: 50px;
+	max-width: 1000px;
+	background-color: antiquewhite;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.accordion__item {
+	border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+	margin-bottom: 5px;
+}
+
+.accordion__section {
+	width: 0;
+	height: 0;
+	appearance: none;
+}
+
+.accordion__label {
+	cursor: pointer;
+	padding: 15px 20px;
+	text-align: left;
+	font-size: 25px;
+	font-weight: 600;
+	display: block;
+}
+
+.accordion:hover .accordion__label {
+	background-image: url(/cssBayan/assets/svg/accordion_btn.svg);
+	background-position: 95% 50%;
+	background-repeat: no-repeat;
+	color: rgb(0, 140, 255);
+}
+
+
+
+.accordion__content {
+	display: none;
+	cursor: pointer;
+}
+
+.accordion__title {}
+
+.accordion__img {
+	padding-bottom: 25px;
+}
+
+.accordion__section:checked~.accordion__label {
+	color: black;
+}
+
+.accordion__section:checked~.accordion__content {
+	transition: all 0.5s;
+	display: flex;
+	justify-content: center;
+}
+
+.accordion__section:checked+.accordion__item {
+	border: none;
+}
