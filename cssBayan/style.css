@@ -67,23 +67,32 @@
 	opacity: 1;
 	height: 100%;
 } */
+html {
+	font-size: 62.5%;
+	background-color: antiquewhite;
+
+}
+
 .accordion {
 	margin: 0 auto;
-	width: 900px;
-	padding: 20px;
+	width: 90rem;
+	font-size: 3rem;
+	padding: 2rem;
 	display: flex;
 	color: rgba(37, 37, 255, 0.819);
 	flex-direction: column;
 	justify-content: center;
-	background-color: antiquewhite;
 	/* align-items: center; */
-	font-size: 22px;
 	font-weight: 600;
 }
 
+.accordion-header {
+	font-size: 4rem;
+}
+
 .accordion__item {
-	padding: 0 0 20px 0;
-	border-top: 2px solid rgba(0, 0, 0, 0.3);
+	padding: 0 0 2rem 0;
+	border-top: 0.2rem solid rgba(0, 0, 0, 0.3);
 }
 
 .accordion:hover {
@@ -140,8 +149,8 @@
 	background-image: url(./assets/svg/accordion_btn.svg);
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 17px;
-	width: 16px;
+	height: 1.7rem;
+	width: 1.6rem;
 	visibility: hidden;
 	transition: transform 0.3s;
 }
@@ -160,8 +169,8 @@
 }
 
 .accordion__input:checked+.accordion__label .item__content .item__img {
-	height: 350px;
-	width: 350px;
+	height: 30.5rem;
+	width: 30.5rem;
 	opacity: 1;
 }
 
@@ -189,8 +198,28 @@
 	}
 
 	.accordion__item:hover .item__img {
-		height: 350px;
-		width: 350px;
+		height: 30.5rem;
+		width: 30.5rem;
 		opacity: 1;
+	}
+}
+
+
+
+@media (min-width: 820px) {
+	html {
+		font-size: 55%;
+	}
+}
+
+@media (max-width: 320px) {
+	html {
+		font-size: 40%;
+	}
+}
+
+@media (min-width: 1920px) {
+	html {
+		font-size: 55%;
 	}
 }
